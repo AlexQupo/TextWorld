@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77390770-FA68-413C-B378-E8424E9FD414}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TextWorld</RootNamespace>
+    <AssemblyName>TextWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backpack.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="Editor\DoorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\DoorForm.Designer.cs">
+      <DependentUpon>DoorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maze.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="Play\Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Play\Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Play\SelectionWorld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Play\SelectionWorld.Designer.cs">
+      <DependentUpon>SelectionWorld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Editor\ObjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\ObjectForm.Designer.cs">
+      <DependentUpon>ObjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\MazeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\MazeInfoForm.Designer.cs">
+      <DependentUpon>MazeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\MazeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\MazeForm.Designer.cs">
+      <DependentUpon>MazeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\WorldsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\WorldsForm.Designer.cs">
+      <DependentUpon>WorldsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniversalSaveClass.cs" />
+    <Compile Include="WindRose.cs" />
+    <EmbeddedResource Include="Editor\DoorForm.resx">
+      <DependentUpon>DoorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Play\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Play\SelectionWorld.resx">
+      <DependentUpon>SelectionWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Editor\ObjectForm.resx">
+      <DependentUpon>ObjectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\MazeInfoForm.resx">
+      <DependentUpon>MazeInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\MazeForm.resx">
+      <DependentUpon>MazeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\WorldsForm.resx">
+      <DependentUpon>WorldsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
